@@ -10,6 +10,10 @@ dialect_model/
 │   ├── balanced_data.csv         # Balanced dataset metadata
 │   ├── balanced_data_full.pkl    # Balanced dataset with audio
 │   └── ...                       # Other balanced datasets
+├── archive/                      # Other files in exploratory coding process
+│   ├── data_features.ipynb       # original feature building notebook
+│   ├── feature_extraction_test.ipynb      # original pulling out audio features
+│   ├── replication_test.ipynb    # original testing out classification model
 ├── load_data.py                  # Load and process raw datasets
 ├── add_cantonese_data.py         # Add Cantonese data separately
 ├── add_features_and_balance.py   # Extract features and create balanced datasets

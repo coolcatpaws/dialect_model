@@ -6,7 +6,7 @@ import time
 import os
 import pickle
 
-torch.multiprocessing.set_sharing_strategy('file_system') # This is necessary to avoid issues with multiprocessing in PyTorch
+# torch.multiprocessing.set_sharing_strategy('file_system') # This is necessary to avoid issues with multiprocessing in PyTorch
 
 # Load datasets with error handling
 try:
@@ -14,7 +14,7 @@ try:
     shanghai_corpus = load_dataset("TingChen-ppmc/Shanghai_Dialect_Conversational_Speech_Corpus", split = "train")
     print("Shanghai corpus loaded successfully")
 except Exception as e:
-    print(f"Error loading Shanghai corpus: {e}")
+    print(f"Error loading Shanghai corpus: {e}") 
     shanghai_corpus = None
 
 try:
@@ -87,7 +87,7 @@ def process_mandarin(mandarin_corpus, max_samples=3000):
 # Process Sichuan and Cantonese datasets with progress bars since they are streaming 
 # Takes incredibly long to process the full datasets, so we limit the number of samples processed for demo
 
-def process_sichuan(sichuan_corpus, max_samples=100):
+def process_sichuan(sichuan_corpus, max_samples=3000):
     if sichuan_corpus is None:
         print("Sichuan corpus not available, skipping...")
         return []
@@ -110,7 +110,7 @@ def process_sichuan(sichuan_corpus, max_samples=100):
     
     return data
 
-def process_cantonese(cantonese_corpus, max_samples=100):
+def process_cantonese(cantonese_corpus, max_samples=3000):
     if cantonese_corpus is None:
         print("Cantonese corpus not available, skipping...")
         return []

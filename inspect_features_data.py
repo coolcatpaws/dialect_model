@@ -62,9 +62,9 @@ def inspect_features_data():
             missing_features.append(column)
     
     if missing_features:
-        print(f"❌ Missing features: {missing_features}")
+        print(f"Missing features: {missing_features}")
     else:
-        print("✅ All expected features are present!")
+        print("All expected features are present!")
     
     # Show some statistics
     print(f"\n=== Dataset Statistics ===")
