@@ -23,7 +23,7 @@ sentiment_tokenizer = BertTokenizer.from_pretrained('IDEA-CCNL/Erlangshen-Robert
 sentiment_model = BertForSequenceClassification.from_pretrained('IDEA-CCNL/Erlangshen-Roberta-110M-Sentiment')
 
 snr_model = Model.from_pretrained("pyannote/brouhaha", 
-                                  use_auth_token="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")
+                                  use_auth_token="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") #NOTE: HF_TOKEN IS EXPIRED. BUILD IT OUT IN EC2/DOCKER either IAM role or HF_TOKEN env variable 
 snr_inference = Inference(snr_model)
 
 # Mappings
