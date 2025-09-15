@@ -1,0 +1,7 @@
+
+# Large datasets (ignore)
+hf/
+*.parquet
+*.pickle
+*.pt
+*.bin
