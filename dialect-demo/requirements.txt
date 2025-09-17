@@ -1,0 +1,11 @@
+torch
+torchaudio
+librosa
+gradio
+safetensors
+huggingface_hub
+numpy
+soundfile
+scikit-learn
+seaborn
+matplotlib
